@@ -1,0 +1,26 @@
+# Data paths
+local_results_path: results # relative to project root
+local_datasets_path: data # relative to project root
+s3_results_path: # s3 storage
+s3_datasets_path: # s3 storage
+
+# Device, environment and regions
+aws_profile: nv-automation-dev
+region_name: eu-west-1
+# instance_type: p3.2xlarge # v100
+instance_type: g4dn.4xlarge # t4
+spot: yes
+# spot_duration: 360
+
+image: ubuntu18-latest-drivers
+disk_size: 128
+conda_env: env.yml
+
+# Job options
+run_in_background: no
+persist: no
+
+# Permissions and credentials
+security_group: default
+instance_key: # path to ssh key with EC2 access on AWS
+role: NimboFullS3AccessRole
